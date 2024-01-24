@@ -25,13 +25,7 @@ function Login() {
                     // reCAPTCHA solved, allow signInWithPhoneNumber.
                     // ...
                     this.setState({ isButtonDisabled: false });
-                },
-                "expired-callback": response => {
-                    // Response expired. Ask user to solve reCAPTCHA again.
-                    // ...
-                    this.setState({ isButtonDisabled: true, error: "Recaptcha Expired. Please try again." });
-
-                }
+                },                
             }
 
         )
