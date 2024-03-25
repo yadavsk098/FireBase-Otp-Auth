@@ -24,8 +24,9 @@ function Login() {
                 callback: response => {
                     // reCAPTCHA solved, allow signInWithPhoneNumber.
                     // ...
-                    this.setState({ isButtonDisabled: false });
-                },                
+                    
+                },     
+                expired           
             }
 
         )
@@ -64,7 +65,7 @@ function Login() {
         }
     }
 
-    return (
+    return ( 
         <div>
             {!otpSent ? (<div id="recaptcha-container"></div>) : null}
             <input
